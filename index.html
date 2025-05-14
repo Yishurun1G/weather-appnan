@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Defines the character encoding for the document -->
+    <meta charset="UTF-8">
+    
+    <!-- Makes the website responsive on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Sets the title of the webpage (appears on the browser tab) -->
+    <title>Weather App</title>
+    
+    <!-- Links the external CSS file for styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <!-- Main container for the weather app -->
+   <div class="card">
+       
+       <!-- Search section where users can input a city name -->
+       <div class="search">
+           <input type="text" placeholder="Enter city name" spellcheck="false">
+           <!-- Button with a search icon for submitting the city name -->
+           <button><img src="images/search.png"></button>
+       </div>
+
+       <!-- Error message container (hidden by default, shown when an invalid city is entered) -->
+       <div class="error">
+           <p>Invalid city name</p>
+       </div>
+
+       <!-- Main weather display section -->
+       <div class="weather">
+           <!-- Displays an icon representing the current weather -->
+           <img src="images/rain.png" class="weather-icon">
+           
+           <!-- Displays the temperature -->
+           <h1 class="temp">22°C</h1>
+           
+           <!-- Displays the city name -->
+           <h2 class="city">Ethiopia</h2>
+
+           <!-- Additional weather details like humidity and wind speed -->
+           <div class="details">
+               
+               <!-- Humidity information -->
+               <div class="col">
+                   <img src="images/humidity.png"> <!-- Icon for humidity -->
+                   <div>
+                       <p class="humidity">50%</p> <!-- Displays humidity percentage -->
+                       <p>Humidity</p> <!-- Label -->
+                   </div>
+               </div>
+
+               <!-- Wind speed information -->
+               <div class="col">
+                   <img src="images/wind.png"> <!-- Icon for wind speed -->
+                   <div>
+                       <p class="wind">15km/hr</p> <!-- Displays wind speed -->
+                       <p>Wind Speed</p> <!-- Label -->
+                   </div>
+               </div>
+
+           </div>
+       </div>
+
+   </div> 
+
+   <!-- Links the external JavaScript file for functionality -->
+   <script src="weather.js"></script>
+
+</body>
+</html>

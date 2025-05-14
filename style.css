@@ -1,0 +1,191 @@
+/* 
+🔹 Reset default margin, padding, and apply a universal box-sizing rule.
+   - `box-sizing: border-box;` ensures padding & border don't affect width/height.
+   - Sets a default font-family for the entire page.
+*/
+* {
+    margin: 0;
+    padding: 0%;
+    font-family: 'Poppins', 'sans-serif';
+    box-sizing: border-box;
+}
+
+/* 
+🔹 Styles the body background color.
+   - Uses a dark background (#222) for a modern look.
+*/
+body {
+    background: #222;
+}
+
+/* 
+🔹 Styles the main card container.
+   - Width is 90% but does not exceed 470px.
+   - Background has a gradient effect.
+   - Text is centered with rounded corners.
+   - Adds padding for spacing and a margin to center it on the page.
+*/
+.card {
+    width: 90%;
+    max-width: 470px;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: #fff;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}
+
+/* 
+🔹 Styles the search section.
+   - Uses flexbox for layout alignment.
+   - Ensures search input and button are aligned properly.
+*/
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 
+🔹 Styles the search input field.
+   - Removes border and outline for a clean look.
+   - Background is light cyan for contrast.
+   - Uses padding & border-radius for rounded edges.
+   - `flex: 1;` makes it expand to fill available space.
+   - Margin-right creates spacing between input and button.
+*/
+.search input {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+
+/* 
+🔹 Styles the search button.
+   - Circular button with no border.
+   - Background color matches the input field.
+   - Cursor set to pointer for better UX.
+*/
+.search button {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+/* 
+🔹 Styles the search button image (search icon).
+   - Sets width to maintain consistency.
+*/
+.search button img {
+    width: 16px;
+}
+
+/* 
+🔹 Styles the weather icon.
+   - Centers the icon by giving it some margin from the top.
+*/
+.weather-icon {
+    width: 170px;
+    margin-top: 30px;
+}
+
+/* 
+🔹 Styles the temperature display.
+   - Uses a large font size for readability.
+   - Applies a different font-family for a formal style.
+*/
+.weather h1 {
+    font-size: 80px;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* 
+🔹 Styles the city name.
+   - Uses a slightly smaller font than temperature.
+   - Moves it closer to the temperature using negative margin.
+*/
+.weather h2 {
+    font-size: 45px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: -10px;
+}
+
+/* 
+🔹 Styles the weather details section.
+   - Uses flexbox to align items horizontally.
+   - Adds padding and margin for spacing.
+*/
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+/* 
+🔹 Styles individual detail columns (Humidity & Wind).
+   - Uses flexbox to align icons and text.
+   - Ensures text aligns properly beside the icons.
+*/
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+/* 
+🔹 Styles the icons in the details section.
+   - Adjusts size and spacing between the icon and text.
+*/
+.col img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+/* 
+🔹 Styles the humidity and wind speed values.
+   - Uses a larger font for emphasis.
+   - Moves text slightly up using negative margin.
+*/
+.humidity, .wind {
+    font-size: 28px;
+    margin-top: -6px;
+}
+
+/* 
+🔹 Initially hides the weather details.
+   - The `.weather` section will be shown dynamically via JavaScript.
+*/
+.weather {
+    display: none;
+}
+
+/* 
+🔹 Styles the error message.
+   - Aligns text to the left.
+   - Uses a small font for subtle appearance.
+   - Initially hidden (`display: none;`), shown only when an invalid city is entered.
+*/
+.error {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+
